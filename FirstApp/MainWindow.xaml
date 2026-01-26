@@ -1,0 +1,29 @@
+﻿<Window x:Class="FirstApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FirstApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid Width="350" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center" >
+            <TextBlock Text="Родительский процесс" FontSize="24" TextAlignment="Center"/>
+            <Button
+                Width="160"
+                Height="30"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Bottom"
+                Click="Button_Click_CreateChildProcess"
+                Content="Создать дочерний процесс" />
+
+            <Button
+                Width="160"
+                Height="30"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Click="Button_Click_KillChildProcess"
+                Content="Убить дочерний процесс" />
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,43 @@
+﻿<Window x:Class="FSLesson.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FSLesson"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        
+        <TextBlock Grid.Row="0" Text="Параллельный калькулятор" 
+                   FontSize="24" FontWeight="Bold" 
+                   HorizontalAlignment="Center" Margin="10"/>
+
+        
+        <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button x:Name="OpenSumFormButton" Content="Открыть форму 'Сумма'" 
+                    Height="40" Width="200" Margin="0,10" 
+                    FontSize="16" Click="OpenSumFormButton_Click"/>
+
+            <Button x:Name="OpenDifferenceFormButton" Content="Открыть форму 'Разность'" 
+                    Height="40" Width="200" Margin="0,10"
+                    FontSize="16" Click="OpenDifferenceFormButton_Click"/>
+
+            <Button x:Name="OpenBothFormsButton" Content="Открыть обе формы" 
+                    Height="40" Width="200" Margin="0,10"
+                    FontSize="16" Click="OpenBothFormsButton_Click"/>
+        </StackPanel>
+
+       
+        <StatusBar Grid.Row="2">
+            <StatusBarItem>
+                <TextBlock x:Name="StatusText" Text="Готово"/>
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
+</Window>
