@@ -29,14 +29,12 @@ namespace FirstExample
 
         private void CalculateButton_Click(object sender, RoutedEventArgs e)
         {
-            //  Проверка на ввод
+           
             if (!double.TryParse(InputTextBox.Text, out double number))
             {
                 MessageBox.Show("Введите число!");
                 return;
             }
-
-            //  начало вычисления
             ProgressBar.Visibility = Visibility.Visible;
             CalculateButton.IsEnabled = false;
 
@@ -62,7 +60,7 @@ namespace FirstExample
             Thread.Sleep(1000); //1 секк
 
             
-            double sum = number + 1 + 2;
+            double sum = number + 1 + 2 + 3 + 4 + 5;
 
             return sum;
         }
